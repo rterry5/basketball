@@ -1,0 +1,86 @@
+body {
+    background: url("/nba-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    margin: 5rem;
+    flex-wrap: wrap;
+    background: rgba(31, 31, 31, 0.97);
+}
+
+.sidebar {
+    display: flex;
+    width: fit-content;
+    img {
+        width: 70px;
+    }
+}
+
+.team {
+    display: inline;
+}
+
+.statsbar {
+    display: flex;
+    
+    width: 5rem;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+.mobile-container {
+    max-width: fit-content;
+    margin: auto;
+    height: fit-content;
+  }
+  
+  .menu-icon {
+      display: inline;
+  }
+
+  .team {
+    display: none;
+}
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.menu-icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+}
