@@ -1,12 +1,27 @@
 document.getElementById('menu').addEventListener('click', myFunction);
 
 function myFunction() {
-    let logos = document.getElementsByClassName('team');
+  let logo = document.getElementsByClassName("team");
+  let i;
 
-  for (var i = 0; i < logos.length; i++) {
-    logos[i].getElementsByClassName.display = "none";
+  for (i = 0; i < logo.length; i++) {
+    if (logo[i].style.display === 'inline') {
+      logo[i].style.display = 'none';
+    } else {
+      logo[i].style.display = 'inline';
     }
+  }
 }
+
+// function myFunction() {
+//     let logos = document.getElementById('team');
+//     let displaySetting = logos.style.display;
+//     if (displaySetting === "inline") {
+//       displaySetting = "none";
+//     } else {
+//       displaySetting = "inline";
+//     }
+// }
 
 // if (displaySetting === "inline") {
 //     displaySetting = "none";

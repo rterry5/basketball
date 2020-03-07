@@ -3,99 +3,59 @@ body {
   background: url("/nba-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
 
-/* line 7, ../sass/main.scss */
+/* line 8, ../sass/main.scss */
 .container {
   display: flex;
-  margin: 5rem;
+  margin: 2rem;
   flex-wrap: wrap;
   background: rgba(31, 31, 31, 0.97);
 }
 
-/* line 14, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 .sidebar {
   display: flex;
   width: fit-content;
 }
-/* line 17, ../sass/main.scss */
-.sidebar img {
-  width: 70px;
-}
 
-/* line 22, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 .team {
-  display: inline;
+  width: 55px;
 }
 
-/* line 26, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 .statsbar {
   display: flex;
   width: 5rem;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 .menu-icon {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 37, ../sass/main.scss */
+  /* line 35, ../sass/main.scss */
   .mobile-container {
-    max-width: fit-content;
     margin: auto;
     height: fit-content;
   }
 
-  /* line 43, ../sass/main.scss */
+  /* line 40, ../sass/main.scss */
   .menu-icon {
     display: inline;
+    width: 100%;
+    background-color: red;
+  }
+  /* line 44, ../sass/main.scss */
+  .menu-icon > .hamburger {
+    width: 40px;
   }
 
-  /* line 47, ../sass/main.scss */
+  /* line 49, ../sass/main.scss */
   .team {
     display: none;
-  }
-
-  /* line 51, ../sass/main.scss */
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
-
-  /* line 57, ../sass/main.scss */
-  .topnav #myLinks {
-    display: none;
-  }
-
-  /* line 61, ../sass/main.scss */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-
-  /* line 69, ../sass/main.scss */
-  .topnav a.menu-icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  /* line 77, ../sass/main.scss */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  /* line 82, ../sass/main.scss */
-  .active {
-    background-color: #4CAF50;
-    color: white;
   }
 }
