@@ -1,13 +1,12 @@
 body {
-  background: url("/nba-background.jpg");
-  background-repeat: no-repeat;
+  background: no-repeat url("/nba-background.jpg");
   background-size: cover;
   background-color: black;
 }
 
 .container {
   display: flex;
-  margin: 2rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
   background: rgba(31, 31, 31, 0.97);
 }
@@ -17,36 +16,84 @@ body {
   width: fit-content;
 }
 
-.team {
-  width: 55px;
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 4em;
 }
 
-.statsbar {
-  display: flex;
-
-  width: 5rem;
+.team {
+  width: 55px;
 }
 
 .menu-icon {
   display: none;
 }
 
+// Content
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 3;
+}
+
+@media all and (max-width: 700px) {
+  aside,
+  article {
+    grid-column: 1 / 3;
+  }
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #e9e7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+
+// Mobile
 @media screen and (max-width: 600px) {
   .mobile-container {
     margin: auto;
     height: fit-content;
   }
 
+  .column {
+    padding: 0;
+  }
+
   .menu-icon {
     display: inline;
     width: 100%;
-    background-color: red;
+    background-color: rgb(255, 94, 0);
     > .hamburger {
       width: 40px;
     }
   }
 
   .team {
+    display: inline;
+  }
+
+  .team.hide-mobile {
     display: none;
   }
 }

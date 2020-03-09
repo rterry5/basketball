@@ -2,29 +2,23 @@ document.getElementById('menu').addEventListener('click', myFunction);
 
 function myFunction() {
   let logo = document.getElementsByClassName("team");
-  let i;
 
   for (i = 0; i < logo.length; i++) {
-    if (logo[i].style.display === 'inline') {
-      logo[i].style.display = 'none';
-    } else {
-      logo[i].style.display = 'inline';
-    }
+    logo[i].classList.toggle('hide-mobile');
   }
 }
 
-// function myFunction() {
-//     let logos = document.getElementById('team');
-//     let displaySetting = logos.style.display;
-//     if (displaySetting === "inline") {
-//       displaySetting = "none";
-//     } else {
-//       displaySetting = "inline";
-//     }
-// }
-
-// if (displaySetting === "inline") {
-//     displaySetting = "none";
-//   } else {
-//     displaySetting = "inline";
-//   }
+// NBA API
+fetch("https://api-nba-v1.p.rapidapi.com/games/live/", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
+		"x-rapidapi-key": "a52fe69426msh1f35c669fc86b74p1400dajsnbf9383d6c503"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.log(err);
+});

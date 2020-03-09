@@ -1,61 +1,112 @@
 /* line 1, ../sass/main.scss */
 body {
-  background: url("/nba-background.jpg");
-  background-repeat: no-repeat;
+  background: no-repeat url("/nba-background.jpg");
   background-size: cover;
   background-color: black;
 }
 
-/* line 8, ../sass/main.scss */
+/* line 7, ../sass/main.scss */
 .container {
   display: flex;
-  margin: 2rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
   background: rgba(31, 31, 31, 0.97);
 }
 
-/* line 15, ../sass/main.scss */
+/* line 14, ../sass/main.scss */
 .sidebar {
   display: flex;
   width: fit-content;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 4em;
+}
+
+/* line 27, ../sass/main.scss */
 .team {
   width: 55px;
 }
 
-/* line 24, ../sass/main.scss */
-.statsbar {
-  display: flex;
-  width: 5rem;
-}
-
-/* line 30, ../sass/main.scss */
+/* line 31, ../sass/main.scss */
 .menu-icon {
   display: none;
 }
 
+/* line 37, ../sass/main.scss */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+/* line 43, ../sass/main.scss */
+header, footer {
+  grid-column: 1 / 3;
+}
+
+@media all and (max-width: 700px) {
+  /* line 48, ../sass/main.scss */
+  aside,
+  article {
+    grid-column: 1 / 3;
+  }
+}
+/* Demo Specific Styles */
+/* line 55, ../sass/main.scss */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+/* line 61, ../sass/main.scss */
+header,
+aside,
+article,
+footer {
+  background: #e9e7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+
 @media screen and (max-width: 600px) {
-  /* line 35, ../sass/main.scss */
+  /* line 74, ../sass/main.scss */
   .mobile-container {
     margin: auto;
     height: fit-content;
   }
 
-  /* line 40, ../sass/main.scss */
+  /* line 79, ../sass/main.scss */
+  .column {
+    padding: 0;
+  }
+
+  /* line 83, ../sass/main.scss */
   .menu-icon {
     display: inline;
     width: 100%;
-    background-color: red;
+    background-color: #ff5e00;
   }
-  /* line 44, ../sass/main.scss */
+  /* line 87, ../sass/main.scss */
   .menu-icon > .hamburger {
     width: 40px;
   }
 
-  /* line 49, ../sass/main.scss */
+  /* line 92, ../sass/main.scss */
   .team {
+    display: inline;
+  }
+
+  /* line 96, ../sass/main.scss */
+  .team.hide-mobile {
     display: none;
   }
 }
