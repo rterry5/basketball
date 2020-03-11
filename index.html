@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets\main.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,9 +15,9 @@
         <a href="javascript:void(0);" class="menu-icon" id="menu">
             <img src="/hamburger-menu.png" alt="" class="hamburger">
         </a>
-        <div class="sidebar">
+        <div class="top-menu">
             <div class="column logos">
-                <a href=""><img
+                <a href="#"><img
                         src="https://logoeps.com/wp-content/uploads/2012/11/atlanta-hawks-logo-vector-200x200.png"
                         alt="" class="team hide-mobile"></a>
                 <a href=""><img
@@ -109,21 +110,31 @@
     </div>
     <div class="grid">
         <header>
-          Header
         </header>
-      
         <aside class="sidebar-left">
-          <h3>Player</h3>
-          <p class="firstName"></p>
-          <p id="lastName">Test</p>
+                <div class="sidebar player">
+                        <h3 class="sidebar-title">Player</h3>
+                        <p class="sidebar-info" id="fullName"></p>
+                        <p class="sidebar-info" id="team"></p>
+                </div>
         </aside>
-      
         <aside class="sidebar-right">
-          Right Sidebar
+                <div class="sidebar game">
+                        <h3 class="sidebar-title">Score</h3>
+                        <div class="game-score">
+                                <img src="" id="homeLogo">
+                                <span class="sidebar-info" id="homeTeam"></span>
+                                <span id="homeScore" class="score"></span><br />
+                                
+                                <img src="" id="visitingLogo">
+                                <span class="sidebar-info" id="visitingTeam"></span>
+                                <span id="visitingScore" class="score"></span><br />
+                        </div>
+                        <p class="sidebar-info" id="clock"></p>
+                </div>
         </aside>
-        
         <footer>
-          Footer
+          <p id="teamName"></p>
         </footer>
       </div>
     <script src="/script.js">
