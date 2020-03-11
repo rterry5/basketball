@@ -2,6 +2,13 @@ body {
   background: no-repeat url("/nba-background.jpg");
   background-size: cover;
   background-color: black;
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+header, footer {
+  grid-column: 1 / 3;
 }
 
 .container {
@@ -44,6 +51,7 @@ body {
 
 #visitingScore, #homeScore {
   font-family: 'Roboto', sans-serif;
+  flex: 1 1 0;
 }
 
 // Content
@@ -52,10 +60,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
-}
-
-header, footer {
-  grid-column: 1 / 3;
 }
 
 @media all and (max-width: 700px) {
@@ -79,11 +83,9 @@ header, footer {
   margin: 0em 4em;
 }
 
-/* Demo Specific Styles */
-body {
-  margin: 0 auto;
-  max-width: 56em;
-  padding: 1em 0;
+.game-score {
+  display: flex;
+  flex: 1 1 0;
 }
 
 aside, article, footer {
@@ -123,22 +125,6 @@ header {
     background-color: rgb(255, 94, 0);
     > .hamburger {
       width: 40px;
-    }
-  }
-
-  // .team {
-  //   display: inline;
-  // }
-
-  .logos > a {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transition-duration: 0.3s;
-    transition-property: transform;
-    &:hover, &:focus, &:active {
-      transform: scale(1.1) rotate(4deg);
     }
   }
 

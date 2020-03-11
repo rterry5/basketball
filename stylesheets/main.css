@@ -3,9 +3,17 @@ body {
   background: no-repeat url("/nba-background.jpg");
   background-size: cover;
   background-color: black;
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
 }
 
-/* line 7, ../sass/main.scss */
+/* line 10, ../sass/main.scss */
+header, footer {
+  grid-column: 1 / 3;
+}
+
+/* line 14, ../sass/main.scss */
 .container {
   display: flex;
   margin-bottom: 1rem;
@@ -13,13 +21,13 @@ body {
   background: rgba(31, 31, 31, 0.97);
 }
 
-/* line 14, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 .top-menu {
   display: flex;
   width: fit-content;
 }
 
-/* line 19, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .column {
   display: flex;
   flex-wrap: wrap;
@@ -28,76 +36,70 @@ body {
   padding: 2em 4em;
 }
 
-/* line 27, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 .team {
   width: 55px;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 .menu-icon {
   display: none;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 .sidebar-title {
   font-family: 'Anton', sans-serif;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .sidebar-info {
   font-family: 'Roboto', sans-serif;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 #visitingScore, #homeScore {
   font-family: 'Roboto', sans-serif;
+  flex: 1 1 0;
 }
 
-/* line 51, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 }
 
-/* line 57, ../sass/main.scss */
-header, footer {
-  grid-column: 1 / 3;
-}
-
 @media all and (max-width: 700px) {
-  /* line 62, ../sass/main.scss */
+  /* line 66, ../sass/main.scss */
   aside,
   article {
     grid-column: 1 / 3;
   }
 }
-/* line 68, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 #homeLogo, #visitingLogo {
   width: 30px;
   margin-right: 1em;
 }
 
-/* line 73, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 #clock {
   text-align: center;
 }
 
-/* line 77, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 .score {
   text-align: right;
   margin: 0em 4em;
 }
 
-/* Demo Specific Styles */
-/* line 83, ../sass/main.scss */
-body {
-  margin: 0 auto;
-  max-width: 56em;
-  padding: 1em 0;
+/* line 86, ../sass/main.scss */
+.game-score {
+  display: flex;
+  flex: 1 1 0;
 }
 
-/* line 89, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 aside, article, footer {
   background: #e9e7fa;
   display: flex;
@@ -106,7 +108,7 @@ aside, article, footer {
   height: 25vh;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 header {
   background: url("/blazers02.jpg") no-repeat 0% 5%/cover;
   display: flex;
@@ -115,49 +117,35 @@ header {
   height: 25vh;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .sidebar {
   height: 100%;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 111, ../sass/main.scss */
+  /* line 113, ../sass/main.scss */
   .mobile-container {
     margin: auto;
     height: fit-content;
   }
 
-  /* line 116, ../sass/main.scss */
+  /* line 118, ../sass/main.scss */
   .column {
     padding: 0;
   }
 
-  /* line 120, ../sass/main.scss */
+  /* line 122, ../sass/main.scss */
   .menu-icon {
     display: inline;
     width: 100%;
     background-color: #ff5e00;
   }
-  /* line 124, ../sass/main.scss */
+  /* line 126, ../sass/main.scss */
   .menu-icon > .hamburger {
     width: 40px;
   }
 
-  /* line 133, ../sass/main.scss */
-  .logos > a {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px transparent;
-    transition-duration: 0.3s;
-    transition-property: transform;
-  }
-  /* line 140, ../sass/main.scss */
-  .logos > a:hover, .logos > a:focus, .logos > a:active {
-    transform: scale(1.1) rotate(4deg);
-  }
-
-  /* line 145, ../sass/main.scss */
+  /* line 131, ../sass/main.scss */
   .team.hide-mobile {
     display: none;
   }
